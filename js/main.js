@@ -17,7 +17,7 @@ function createHtml(data) {
         nameDiv.classList.add('label')
 
         let itemDiv = document.createElement("div")
-        itemDiv.append(iconDiv + nameDiv)
+        itemDiv.append(iconDiv, nameDiv)
         itemDiv.classList.add('item')
 
         iconsHtml += itemDiv
