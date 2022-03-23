@@ -1,7 +1,6 @@
 function createHtml(data) {
     var iconsObject = data
     var iconsContainer = document.getElementById("icons")
-    var iconsHtml = ""
 
     Object.keys(iconsObject).forEach(key => {
         const obj = iconsObject[key]
@@ -20,10 +19,8 @@ function createHtml(data) {
         itemDiv.append(iconDiv, nameDiv)
         itemDiv.classList.add('item')
 
-        iconsHtml.innerHTML(itemDiv)
+        iconsContainer.append(itemDiv)
     })
-
-    iconsContainer.innerHTML = iconsHtml
 }
 
 function main() {
