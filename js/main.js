@@ -20,7 +20,7 @@ function createHtml(data) {
         itemDiv.append(iconDiv, nameDiv)
         itemDiv.classList.add('item')
 
-        iconsHtml += itemDiv
+        iconsHtml.innerHTML(itemDiv)
     })
 
     iconsContainer.innerHTML = iconsHtml
