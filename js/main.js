@@ -6,7 +6,7 @@ function createHtml(data) {
         const obj = iconsObject[key]
 
         let iconDiv = document.createElement("div")
-        iconDiv.append(obj.code)
+        iconDiv.innerHtml(obj.code)
         iconDiv.classList.add('icon-container')
 
         console.log(obj.code)
