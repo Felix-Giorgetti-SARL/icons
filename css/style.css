@@ -16,6 +16,8 @@ html, body {
     align-items: center;
     padding: 1rem;
     flex-direction: column;
+    width: calc(100% / 8);
+    min-width: 160px;
 }
 .item svg {
     --dimension: 40px;
