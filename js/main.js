@@ -1,6 +1,6 @@
 function main() {
 
-    fetch("../assets/icons.json")
+    fetch("assets/icons.json")
     .then(function (response) {
         return response.json()
     })
