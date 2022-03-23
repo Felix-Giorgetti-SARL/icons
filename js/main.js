@@ -1,9 +1,10 @@
 function createHtml(data) {
     var iconsArray = data
     var iconsContainer = document.getElementById("icons")
-    var iconsHtml
+    var iconsHtml = ""
 
-    iconsArray.forEach(element => {
+    Object.keys(iconsArray).forEach(key => {
+        const obj = iconsArray[key]
         iconsHtml += obj.code + "<br>" + "Name: " + obj.name + " <br>"
     })
 
