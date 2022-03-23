@@ -1,14 +1,5 @@
-function main() {
-
-    fetch("assets/icons.json")
-    .then(function (response) {
-        return response.json()
-    })
-    .then(function (data) {
-        console.log(data)
-    })
-
-    var iconsArray = response.json()
+function createHtml(data) {
+    var iconsArray = data
     var iconsContainer = document.getElementById("icons")
     var iconsHtml
 
@@ -17,6 +8,15 @@ function main() {
     })
 
     iconsContainer.innerHTML = iconsHtml
+}
+
+function main() {
+
+    fetch("assets/icons.json")
+    .then(function (response) {
+        return response.json()
+    })
+    .then(createHtml(data))
 
 }
 main()
