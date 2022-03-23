@@ -7,6 +7,7 @@ html, body {
     width: 80%;
     max-width: 1440px;
 }
+
 .container {
     display: flex;
     flex-wrap: wrap;
