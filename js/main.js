@@ -16,7 +16,7 @@ function main() {
     .then(function (response) {
         return response.json()
     })
-    .then(createHtml(data))
+    .then(createHtml)
 
 }
 main()
