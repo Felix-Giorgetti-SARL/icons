@@ -16,3 +16,11 @@ html, body {
     padding: 1rem;
     flex-direction: column;
 }
+.item svg {
+    --dimension: 40px;
+    width: var(--dimension);
+    height: var(--dimension);
+}
+.icon-container {
+    margin-bottom: 1rem;
+}
