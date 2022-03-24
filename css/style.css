@@ -11,13 +11,14 @@ html, body {
 }
 .item {
     display: flex;
-    margin: 1rem;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 1.6rem 1rem;
     flex-direction: column;
     width: calc(100% / 12);
     min-width: 160px;
+    flex-grow: 1;
+    border: 1px solid #f3f3f3;
 }
 .item svg {
     --dimension: 40px;
