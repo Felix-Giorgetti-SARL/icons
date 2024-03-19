@@ -1,6 +1,14 @@
 function createHtml(data) {
     var iconsObject = data
     var iconsContainer = document.getElementById("icons")
+    var datePlaceholder = document.getElementById("date-placeholder")
+    var lastUpdate = ""
+
+    fetch('https://api.github.com/repos/Felix-Giorgetti-SARL/icons/commits?per_page=1')
+        .then(res => res.json())
+        .then(res => {
+        lastUpdate = res[0].commit?.committer?.date.replace("T", " ").replace("Z", "")
+    })
 
     Object.keys(iconsObject).forEach(key => {
         const obj = iconsObject[key]
@@ -21,6 +29,8 @@ function createHtml(data) {
 
         iconsContainer.append(itemDiv)
     })
+
+    datePlaceholder.innerHTML = lastUpdate
 }
 
 function main() {
