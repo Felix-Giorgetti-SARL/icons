@@ -9,6 +9,12 @@ html, body {
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+}
 .item {
     display: flex;
     justify-content: center;
