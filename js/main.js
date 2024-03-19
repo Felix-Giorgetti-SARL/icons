@@ -6,7 +6,7 @@ function createHtml(data) {
     fetch('https://api.github.com/repos/Felix-Giorgetti-SARL/icons/commits?per_page=1')
         .then(res => res.json())
         .then(res => {
-        datePlaceholder.innerHTML = res[0].commit?.committer?.date.toLocaleString()
+        datePlaceholder.innerHTML = new Date(res[0].commit.committer.date).toLocaleString()
     })
 
     Object.keys(iconsObject).forEach(key => {
